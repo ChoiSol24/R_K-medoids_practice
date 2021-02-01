@@ -6,6 +6,7 @@ reading <- readxl::read_excel(path = "rate_change_ver2.xlsx",
                               sheet = "Sheet1",
                               col_names = TRUE)
 
+
 reading
 
 #전처리 과정
@@ -98,8 +99,10 @@ pam.result <- pamk(reading_rate,3)
 a = table(pam.result$pamobject$clustering, local_name)
 plot(pam(reading ))
 
-reading
+
 
 library(writexl)
 write_xlsx(reading,path = "200927_sub.xlsx")
 write_xlsx(ans, path = "k_medo(ver.rate2).xlsx")
+
+
